@@ -19,10 +19,12 @@
 
 
 
+            // orders games alphabetically from the games that had higher tha 4.0
             var sortedGames = (from game in topRatedGames
                                orderby game.Name
                                select game).ToList();
 
+            // loop goes over every sorted game in the list and prints a new line
             foreach (var game in sortedGames)
             {
                 Console.WriteLine(game.Name);
